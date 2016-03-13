@@ -31,14 +31,14 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Mandisa Thomas",
-  "",
+  "https://github.com/MandisaT",
   "Diligent and warm. A survivor with empathy left to spare.",
   "thumbnails/picture.png"
 ));
 
 contentArray.push(new Content(
   "Amma Thomas",
-  "",
+  "https://github.com/amma9",
   "Just waiting for the right opportunity. Bright and shy.",
   "thumbnails/picture.png"
 ));
@@ -136,7 +136,7 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Frederiek Pennink",
-  "",
+  "https://github.com/fpenn",
   "A force. Confident, quiet. Success appears to come effortlessly. A little smile might come your way.",
   "thumbnails/picture.png"
 ));
