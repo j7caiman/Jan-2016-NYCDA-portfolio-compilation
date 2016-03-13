@@ -192,6 +192,13 @@ contentArray.forEach(function(item, index) {
     $siteContainer.append($currentRow);
   }
 
+  var linkDisplay;
+  if (item.link.indexOf("github.com") > -1) {
+    linkDisplay = "github";
+  } else {
+    linkDisplay = "portfolio";
+  }
+
   $currentRow.append(
     '<div class="portfolio-entry col-md-6"><div class="portfolio-background"><img class="portfolio-icon" src="'
     + item.thumbnail
@@ -199,7 +206,9 @@ contentArray.forEach(function(item, index) {
     + item.name
     + ' - </h2><a class="portfolio-link" href="'
     + item.link
-    + '" target="_blank">github</a><p class="portfolio-description">'
+    + '" target="_blank">'
+    + linkDisplay
+    + '</a><p class="portfolio-description">'
     + item.description
     + '</p></div></div></div>'
   );
