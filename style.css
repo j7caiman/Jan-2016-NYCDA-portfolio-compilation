@@ -1,0 +1,59 @@
+.portfolio-entry {
+  background-color: #FFF9EE;
+  padding: 0.5em;
+}
+
+.portfolio-background {
+  background-color: #EBEDEE;
+  width: 34em;
+  border-radius: 0.45em;
+}
+
+.portfolio-icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 5.5em;
+  height: 5.5em;
+  border: 0.1em solid #516069;
+  border-radius: 0.25em;
+  margin: 0.65em;
+}
+
+.portfolio-background:hover {
+  background-color: #FFEEB8;
+}
+
+.portfolio-background:hover .portfolio-icon {
+  border: 0.1em solid #EBB102;
+}
+
+.portfolio-text-div {
+  display: inline-block;
+  margin: 0.3em;
+}
+
+.portfolio-name {
+  display: inline;
+  font-size: 1.4em;
+  font-family: "Work Sans", "HelveticaNeue", Helvetica, sans-serif;
+}
+
+.portfolio-link {
+  font-size: 1.4em;
+  font-family: "Work Sans", "HelveticaNeue", Helvetica, sans-serif
+}
+
+.portfolio-description {
+  font-size: 0.93em;
+  width: 27em;
+  margin-top: 0.2em;
+  margin-bottom: 0em;
+}
+
+.title-header {
+  font-weight: 200;  
+}
+
+body {
+    background-color: #FFF9EE;
+}
