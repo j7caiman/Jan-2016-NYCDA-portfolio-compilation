@@ -54,6 +54,10 @@
   font-weight: 200;  
 }
 
+#site-container {
+  max-width: 70em;
+}
+
 body {
     background-color: #FFF9EE;
 }
