@@ -109,7 +109,7 @@ contentArray.push(new Content(
 contentArray.push(new Content(
   "Kilian Kielman",
   "https://github.com/KilianKielman",
-  "A wandering entrepreneur. Gets to the point. Work first laugh second.",
+  "A wandering entrepreneur. Gets to the point. Works first laughs next.",
   "thumbnails/picture.png"
 ));
 
