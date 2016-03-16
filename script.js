@@ -19,7 +19,7 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Trung Vo",
-  "https://github.com/Developoz",
+  "http://developoz.github.io/",
   "Polite, professional, and methodical. Draws a crowd on the dance floor. He's a cupcake.",
   "resources/trung_thumbnail.jpg",
   "resources/trung_screenshot.jpg"
@@ -99,10 +99,10 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Inessa Li",
-  "https://github.com/inessa-lee",
+  "http://inessa-lee.github.io/Personal_Site",
   "Forthright and effective. All business. Serious business, served with a side of kittens.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/inessa_portf300.png",
+  "resources/inessa_portf600.png"
 ));
 
 contentArray.push(new Content(
