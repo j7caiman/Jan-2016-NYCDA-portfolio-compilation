@@ -77,8 +77,8 @@ contentArray.push(new Content(
   "Loet Romijn",
   "http://loetromijn.github.io/Portfolio",
   "Hard working, smart, and lovable. Deserves endless praise. A soaring eagle who doubts her own wings.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/portfolioLoetSquare.jpg",
+  "resources/PortfolioLoetRomijn.png"
 ));
 
 contentArray.push(new Content(
