@@ -27,7 +27,7 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Dianthe van Velzen",
-  "https://github.com/Dianthe",
+  "https://dianthe.github.io/",
   "Sharp. Asks the right questions. Probably going to run the show someday.",
   "resources/picture.png",
   "resources/picture.png"
@@ -51,7 +51,7 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Thijs Tel",
-  "https://github.com/nalar",
+  "http://portfolio.thijstel.com/",
   "Give him two weeks and he'll know more than your CTO. Unbelievable power wrapped in a friendly, supportive package. Lightning.",
   "resources/picture.png",
   "resources/picture.png"
@@ -59,7 +59,7 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Yoni Stap",
-  "https://github.com/YoniStap",
+  "http://yonistap.com",
   "A rising tide raises all ships. Yoni is that tide. Learns quickly, teaches others.",
   "resources/picture.png",
   "resources/picture.png"
@@ -67,7 +67,7 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Lindsey Schaap",
-  "https://github.com/linjoe2",
+  "http://lindseyschaap.nl",
   "The black sheep which wandered away, then came back smarter and stronger than all the rest. Self motivated, full of ideas, and able to execute.",
   "resources/picture.png",
   "resources/picture.png"
@@ -75,7 +75,7 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Loet Romijn",
-  "https://github.com/LoetRomijn",
+  "http://loetromijn.github.io/Portfolio",
   "Hard working, smart, and lovable. Deserves endless praise. A soaring eagle who doubts her own wings.",
   "resources/picture.png",
   "resources/picture.png"
@@ -83,7 +83,7 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Saan Rashid",
-  "https://github.com/SaanGithub",
+  "http://saanrashid.com",
   "Twinkly with quiet charisma. Easy to work with and delivers on time.",
   "resources/picture.png",
   "resources/picture.png"
@@ -123,7 +123,7 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Kilian Kielman",
-  "https://github.com/KilianKielman",
+  "http://www.kiliankielman.com",
   "A wandering entrepreneur. Gets to the point. Works first laughs next.",
   "resources/picture.png",
   "resources/picture.png"
@@ -139,7 +139,7 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Koen Grosman",
-  "https://github.com/koengrosman",
+  "http://koengrosman.com",
   "Just a peach. A quiet observer and effective worker.",
   "resources/picture.png",
   "resources/picture.png"
@@ -163,7 +163,7 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Ashlee Brown",
-  "https://github.com/ashleemb",
+  "http://ashleeb.com",
   "Confident, friendly, professional. Attacks challenges calmly and overcomes them consistently.",
   "resources/picture.png",
   "resources/picture.png"
