@@ -107,10 +107,10 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Tim Van Lent",
-  "https://github.com/TimVanLent",
+  "https://timvanlent.github.io",
   "An artist in a new medium. Quiet but unshy. Excellent worker.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/tim_thumb.jpeg",
+  "resources/tim.jpg"
 ));
 
 contentArray.push(new Content(
