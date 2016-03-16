@@ -125,8 +125,8 @@ contentArray.push(new Content(
   "Kilian Kielman",
   "http://www.kiliankielman.com",
   "A wandering entrepreneur. Gets to the point. Works first laughs next.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/kilian_thumb.png",
+  "resources/kilian.png"
 ));
 
 contentArray.push(new Content(
