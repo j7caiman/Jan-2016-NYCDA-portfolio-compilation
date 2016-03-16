@@ -131,10 +131,10 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Kevin de Jonge",
-  "https://github.com/kevindejonge",
+  "http://kevindejonge.github.io/",
   "A charismatic and goofy exterior houses well considered thought processes. Confident, good natured, and smart.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/kevin_thumb.png",
+  "resources/kevin.png"
 ));
 
 contentArray.push(new Content(
