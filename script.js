@@ -21,8 +21,8 @@ contentArray.push(new Content(
   "Trung Vo",
   "https://github.com/Developoz",
   "Polite, professional, and methodical. Draws a crowd on the dance floor. He's a cupcake.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/trung_thumbnail.jpg",
+  "resources/trung_screenshot.jpg"
 ));
 
 contentArray.push(new Content(
