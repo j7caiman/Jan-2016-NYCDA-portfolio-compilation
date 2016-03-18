@@ -179,10 +179,10 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Colette Biervliet-Schranz",
-  "https://github.com/colette419",
+  "http://colette419.github.io/",
   "Self sufficient, easygoing, and intelligent. Works well alone and with others.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/Colette-Portfolio_thumb.png",
+  "resources/Colette-Portfolio.png"
 ));
 
 
