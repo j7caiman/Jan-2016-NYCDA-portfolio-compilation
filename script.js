@@ -147,10 +147,10 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Roberto Floris",
-  "https://github.com/DiagoSmith",
+  "http://diagosmith.github.io/",
   "q-t-π. Very sweet. A lifelong student who learns well and delivers better.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/roberto_thumb.png",
+  "resources/roberto.png"
 ));
 
 contentArray.push(new Content(
