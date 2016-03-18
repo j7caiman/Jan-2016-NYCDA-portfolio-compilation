@@ -115,10 +115,10 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Sara Koops",
-  "https://github.com/SaraKoops",
+  "http://sarakoops.github.io/portfolio/",
   "Succeeds through sheer force of will. Revelations are accompanied by twinkly laughs. Unstoppable.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/sara_thumb.png",
+  "resources/sara.png"
 ));
 
 contentArray.push(new Content(
