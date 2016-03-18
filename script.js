@@ -12,8 +12,8 @@ contentArray.push(new Content(
   "Lloyd Chambrier",
   "https://github.com/LloydC",
   "Mr. Hot Chocolate. Sleek, seductive, confident. Loyal.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/Lloyd-Portfolio_thumb.png",
+  "resources/Lloyd-Portfolio.png"
 ));
 
 
@@ -29,8 +29,8 @@ contentArray.push(new Content(
   "Dianthe van Velzen",
   "https://dianthe.github.io/",
   "Sharp. Asks the right questions. Probably going to run the show someday.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/Dianthe-Portfolio_thumb.png",
+  "resources/Dianthe-Portfolio.png"
 ));
 
 contentArray.push(new Content(
@@ -53,24 +53,24 @@ contentArray.push(new Content(
   "Thijs Tel",
   "http://portfolio.thijstel.com/",
   "Give him two weeks and he'll know more than your CTO. Unbelievable power wrapped in a friendly, supportive package. Lightning.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/Thijs-Portfolio_thumb.png",
+  "resources/Thijs-Portfolio.png"
 ));
 
 contentArray.push(new Content(
   "Yoni Stap",
   "http://yonistap.com",
   "A rising tide raises all ships. Yoni is that tide. Learns quickly, teaches others.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/Yoni-Portfolio_thumb.png",
+  "resources/Yoni-Portfolio.png"
 ));
 
 contentArray.push(new Content(
   "Lindsey Schaap",
   "http://lindseyschaap.nl",
   "The black sheep which wandered away, then came back smarter and stronger than all the rest. Self motivated, full of ideas, and able to execute.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/Lindsey-Portfolio_thumb.png",
+  "resources/Lindsey-Portfolio.png"
 ));
 
 contentArray.push(new Content(
@@ -85,8 +85,8 @@ contentArray.push(new Content(
   "Saan Rashid",
   "http://saanrashid.com",
   "Twinkly with quiet charisma. Easy to work with and delivers on time.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/Saan-Portfolio_thumb.png",
+  "resources/Saan-Portfolio.png"
 ));
 
 contentArray.push(new Content(
@@ -141,8 +141,8 @@ contentArray.push(new Content(
   "Koen Grosman",
   "http://koengrosman.com",
   "Just a peach. A quiet observer and effective worker.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/Koen-Portfolio_thumb.png",
+  "resources/Koen-Portfolio.png"
 ));
 
 contentArray.push(new Content(
@@ -165,8 +165,8 @@ contentArray.push(new Content(
   "Ashlee Brown",
   "http://ashleeb.com",
   "Confident, friendly, professional. Attacks challenges calmly and overcomes them consistently.",
-  "resources/picture.png",
-  "resources/picture.png"
+  "resources/Ashlee-Portfolio_thumb.png",
+  "resources/Ashlee-Portfolio.png"
 ));
 
 contentArray.push(new Content(
