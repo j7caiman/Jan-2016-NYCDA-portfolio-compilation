@@ -10,7 +10,7 @@ contentArray.push(new Content(
 
 contentArray.push(new Content(
   "Lloyd Chambrier",
-  "https://github.com/LloydC",
+  "http://lloydchambrier.com/",
   "Mr. Hot Chocolate. Sleek, seductive, confident. Loyal.",
   "resources/Lloyd-Portfolio_thumb.png",
   "resources/Lloyd-Portfolio.png"
