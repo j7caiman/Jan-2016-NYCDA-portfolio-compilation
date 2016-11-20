@@ -7,20 +7,28 @@ var RIGHT_BOUND = canvas.width = window.innerWidth;
 var LOWER_BOUND = canvas.height = window.innerHeight;
 var MAX_RADIUS = 300;
 
-var count = 0;
+var count = -1;
 canvas.addEventListener('click', function() {
-  if (count % 3 === 0) {
-    Circle.prototype.draw = Circle.prototype.draw1;
-  } else if (count % 3 === 1) {
-    Circle.prototype.draw = Circle.prototype.draw2;
-  } else {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+
+  if (count % 5 === 0) {
     color = 255;
+    Circle.prototype.draw = Circle.prototype.draw1;
+  } else if (count % 5 === 1) {
+    Circle.prototype.draw = Circle.prototype.draw2;
+  } else if (count % 5 === 2) {
     Circle.prototype.draw = Circle.prototype.draw3;
+  } else if (count % 5 === 3) {
+    Circle.prototype.draw = Circle.prototype.draw4;
+  } else {
+    context.fillStyle = "#000000"
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    Circle.prototype.draw = Circle.prototype.draw5;
   }
+
   count++;
 
   clearInterval(interval);
-  context.clearRect(0, 0, canvas.width, canvas.height);
   circles = [];
   startSequence();
 });
@@ -36,7 +44,7 @@ Circle.prototype.distanceFromPerimeter = function(x, y) {
 }
 
 // crescents
-Circle.prototype.draw1 = function() {
+Circle.prototype.draw3 = function() {
   context.beginPath();
   context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
   context.fillStyle = getRandomColor();
@@ -50,6 +58,47 @@ Circle.prototype.draw1 = function() {
 
 }
 
+// mushroom trees
+Circle.prototype.draw5 = function() {
+  context.beginPath();
+  context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+  context.fillStyle = "#000000";
+  context.fill();
+
+  var amount = 3;
+  for (var shadow = .9; shadow > 0; shadow -= 0.01) {
+    context.beginPath();
+    var color = context.fillStyle;
+    var red = (parseInt(color.substring(1, 3), 16) + amount).toString(16);
+    red = red.length === 1 ? "0" + red : red;
+
+    var green = (parseInt(color.substring(3, 5), 16) + amount).toString(16);
+    green = green.length === 1 ? "0" + green : green;
+
+    var blue = (parseInt(color.substring(5, 7), 16) + amount).toString(16)
+    blue = blue.length === 1 ? "0" + blue : blue;
+
+    context.fillStyle = "#" + red + green + blue;
+
+    context.arc(this.x - 0.5 * this.radius * (1 - shadow), this.y, (this.radius) * shadow, 0, 2 * Math.PI);
+    context.fill();
+    context.closePath();
+  }
+}
+
+// color tunnels
+Circle.prototype.draw4 = function() {
+  var amount = 15;
+  for (var shadow = 1; shadow > 0; shadow -= 0.05) {
+    context.beginPath();
+    context.fillStyle = getRandomColor();
+    context.arc(this.x - 0.9 * this.radius * (1 - shadow), this.y, (this.radius) * shadow, 0, 2 * Math.PI);
+    context.fill();
+    context.closePath();
+  }
+}
+
+
 // bubbles
 Circle.prototype.draw2 = function() {
   context.beginPath();
@@ -58,25 +107,26 @@ Circle.prototype.draw2 = function() {
   context.fill();
 }
 
-// darkening circles
+// petri dish
 var color = 255;
 var colorCount = 0;
-Circle.prototype.draw3 = function() {
+Circle.prototype.draw1 = function() {
   var hexColor = color.toString(16);
-  if(colorCount++ % 2 === 0) {
+  if (colorCount++ % 2 === 0) {
     color--;
   }
   context.beginPath();
-  context.arc(this.x, this.y, this.radius , 0, 2 * Math.PI);
+  context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
   context.fillStyle = "#" + hexColor + hexColor + hexColor;
   context.fill();
 }
 
-Circle.prototype.draw = Circle.prototype.draw3;
+Circle.prototype.draw = Circle.prototype.draw1;
 startSequence();
 
 var circles = [];
 var interval;
+
 function startSequence() {
   interval = setInterval(function() {
     var giveUp = 100;
