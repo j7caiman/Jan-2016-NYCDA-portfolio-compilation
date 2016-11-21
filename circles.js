@@ -7,26 +7,25 @@ var RIGHT_BOUND = canvas.width = window.innerWidth;
 var LOWER_BOUND = canvas.height = window.innerHeight;
 var MAX_RADIUS = 300;
 
-var count = -1;
+var count = 0;
 canvas.addEventListener('click', function() {
+  count++;
   context.clearRect(0, 0, canvas.width, canvas.height);
 
   if (count % 5 === 0) {
     color = 255;
     Circle.prototype.draw = Circle.prototype.draw1;
   } else if (count % 5 === 1) {
+    context.fillStyle = "#000000"
+    context.fillRect(0, 0, canvas.width, canvas.height);
     Circle.prototype.draw = Circle.prototype.draw2;
   } else if (count % 5 === 2) {
     Circle.prototype.draw = Circle.prototype.draw3;
   } else if (count % 5 === 3) {
     Circle.prototype.draw = Circle.prototype.draw4;
   } else {
-    context.fillStyle = "#000000"
-    context.fillRect(0, 0, canvas.width, canvas.height);
     Circle.prototype.draw = Circle.prototype.draw5;
   }
-
-  count++;
 
   clearInterval(interval);
   circles = [];
@@ -44,7 +43,7 @@ Circle.prototype.distanceFromPerimeter = function(x, y) {
 }
 
 // crescents
-Circle.prototype.draw3 = function() {
+Circle.prototype.draw5 = function() {
   context.beginPath();
   context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
   context.fillStyle = getRandomColor();
@@ -59,7 +58,7 @@ Circle.prototype.draw3 = function() {
 }
 
 // mushroom trees
-Circle.prototype.draw5 = function() {
+Circle.prototype.draw2 = function() {
   context.beginPath();
   context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
   context.fillStyle = "#000000";
@@ -87,7 +86,7 @@ Circle.prototype.draw5 = function() {
 }
 
 // color tunnels
-Circle.prototype.draw4 = function() {
+Circle.prototype.draw3 = function() {
   var amount = 15;
   for (var shadow = 1; shadow > 0; shadow -= 0.05) {
     context.beginPath();
@@ -100,7 +99,7 @@ Circle.prototype.draw4 = function() {
 
 
 // bubbles
-Circle.prototype.draw2 = function() {
+Circle.prototype.draw4 = function() {
   context.beginPath();
   context.arc(this.x, this.y, this.radius + 5, 0, 2 * Math.PI);
   context.fillStyle = getRandomColor();
