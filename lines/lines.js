@@ -102,7 +102,7 @@ canvas.addEventListener('click', function() {
     interval = false;
   } else {
     interval = setInterval(function() {
-      for (var i = 0; i < 10; i++) {
+      for (var i = 0; i < 1; i++) {
         runOneIteration();
       }
     }, 1);
