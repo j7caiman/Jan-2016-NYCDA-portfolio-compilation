@@ -61,7 +61,8 @@ Shape.prototype.split = function(line) {
   ];
 }
 
-context.lineWidth = 0.2;
+context.lineWidth = 0.07;
+context.fillStyle = 'rgba(0,0,0,0.015)';
 Shape.prototype.draw = function() {
   context.beginPath();
   context.moveTo(this.path[0].x, this.path[0].y);
@@ -70,7 +71,6 @@ Shape.prototype.draw = function() {
     context.lineTo(point.x, point.y);
   }
   // context.fillStyle = this.fillColor;
-  context.fillStyle = 'rgba(0,0,0,0.01)';
   context.fill();
   context.stroke();
 }
@@ -170,7 +170,7 @@ function makeLine() {
   var angle = Math.random() * Math.PI;
 
   // context.fillStyle = "#FF0000"
-    // context.fillRect(randomPoint.x, randomPoint.y, 7, 7);
+  // context.fillRect(randomPoint.x, randomPoint.y, 7, 7);
 
   // switch (getRandomInt(0, 3)) {
   //   case 0:
