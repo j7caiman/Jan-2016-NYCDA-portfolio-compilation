@@ -1,11 +1,11 @@
 (function() {
   "use strict";
 
-  var canvas = document.getElementById("linesCanvas");
-  var context = canvas.getContext("2d");
+  var canvas = $("#linesCanvas");
+  var context = canvas[0].getContext("2d");
 
-  var RIGHT_BOUND = canvas.width = 500;
-  var LOWER_BOUND = canvas.height = 500;
+  var RIGHT_BOUND = canvas[0].width = canvas.width();
+  var LOWER_BOUND = canvas[0].height = canvas.height();
 
   function Shape(path, fillColor) {
     this.path = path;
@@ -62,8 +62,8 @@
     ];
   }
 
-  context.lineWidth = 0.07;
-  context.fillStyle = 'rgba(0,0,0,0.015)';
+  context.lineWidth = 0.02;
+  context.fillStyle = 'rgba(200,50,200,0.01)';
   Shape.prototype.draw = function() {
     context.beginPath();
     context.moveTo(this.path[0].x, this.path[0].y);
@@ -96,20 +96,15 @@
   var shapes = [];
   shapes.push(firstShape);
 
-  var interval = false;
-  canvas.addEventListener('click', function() {
-    if (interval) {
+  var count = 0;
+  var interval = setInterval(function() {
+    if (count++ === 1500) {
       clearInterval(interval);
-      interval = false;
-    } else {
-      interval = setInterval(function() {
-        for (var i = 0; i < 1; i++) {
-          runOneIteration();
-        }
-      }, 1);
     }
-  });
-
+    // for (var i = 0; i < 10; i++) {
+      runOneIteration();
+    // }
+  }, 1);
 
   function runOneIteration() {
     var line = makeLine();
@@ -169,21 +164,6 @@
     };
 
     var angle = Math.random() * Math.PI;
-
-    // context.fillStyle = "#FF0000"
-    // context.fillRect(randomPoint.x, randomPoint.y, 7, 7);
-
-    // switch (getRandomInt(0, 3)) {
-    //   case 0:
-    //     angle = Math.atan2(-6000, (randomPoint.x - RIGHT_BOUND / 2));
-    //     break;
-    //   case 1:
-    //     angle = -Math.atan2(randomPoint.y - LOWER_BOUND / 4, randomPoint.x);
-    //     break;
-    //   case 2:
-    //     angle = Math.atan2(randomPoint.y - LOWER_BOUND / 4, RIGHT_BOUND - randomPoint.x);
-    //     break;
-    // }
 
     var startPosition = {
       x: 0,
