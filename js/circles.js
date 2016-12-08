@@ -4,15 +4,21 @@ var circles = (function() {
   var canvas = document.getElementById("circleCanvas");
   var context = canvas.getContext("2d");
 
-  var RIGHT_BOUND = canvas.width = 500;
-  var LOWER_BOUND = canvas.height = 500;
+  var RIGHT_BOUND;
+  var LOWER_BOUND;
   var MAX_RADIUS = 300;
 
   canvas.addEventListener('click', cycle);
 
+  function resetBounds(width, height) {
+    RIGHT_BOUND = canvas.width = width;
+    LOWER_BOUND = canvas.height = height;
+  }
+
   function cycle() {
     Circle.prototype.resetDraw();
-    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle = "#FFFFFF";
+    context.fillRect(0, 0, canvas.width, canvas.height);
     clearInterval(interval);
     circles = [];
     startSequence();
@@ -101,6 +107,8 @@ var circles = (function() {
   cycle();
 
   return {
+    resetBounds: resetBounds,
+    cycle: cycle,
     setMaxRadius: function(radius) {
       MAX_RADIUS = radius;
       cycle();
@@ -114,7 +122,6 @@ var circles = (function() {
 
 function exercise1() {
   eval(editor1.getValue());
-
   var MAX_RADIUS = MAX_RADIUS || 300;
 
   circles.setMaxRadius(MAX_RADIUS);
@@ -146,3 +153,9 @@ editor2.setOptions({
   minLines: 8,
   maxLines: 8
 });
+
+
+setTimeout(function() {
+  circles.resetBounds($("#circleCanvas").width(), $("#textEditors").height());
+  circles.cycle();
+}, 1);

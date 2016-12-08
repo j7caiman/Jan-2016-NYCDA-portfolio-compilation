@@ -11,7 +11,7 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen"/>
 </head>
 <body>
-  <nav class="black darken-3">
+  <nav class="blue-grey darken-3">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Jon Miller's School</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Course Information</a></li>
@@ -35,8 +35,8 @@
     <br><br><br><br>
   </div>
 
-  <div class="row lighten-4 grey">
-    <div class="col s12 m6 white">
+  <div class="section row blue-grey">
+    <div id="textEditors" class="col s12 m6 blue-grey lighten-5">
       <h4 class="center">See for yourself:</h4>
 
       <p class="light">Try changing the value of MAX_RADIUS from 300 to 50:</p>
@@ -44,16 +44,12 @@
       <a class="waves-effect waves-light btn" onclick="exercise1()">execute</a>
 
       <p class="light">Feeling more ambitious? Try changing the following function:</p>
-      <pre id="editor2">context.beginPath();
-        context.arc(this.x, this.y, this.radius + 5, 0, 2 * Math.PI);
-        context.fillStyle = getRandomColor();
-        context.fill();
-      </pre>
+      <pre id="editor2">context.beginPath();&#13;context.arc(this.x, this.y, this.radius + 5, 0, 2 * Math.PI);&#13;context.fillStyle = getRandomColor();&#13;context.fill();</pre>
       <a class="waves-effect waves-light btn" onclick="exercise2()">execute</a>
 
       <p class="light">Broke everything? No problem! Click the Reset button:</p>
       <a class="waves-effect waves-light btn" onclick="resetPage()">reset</a>
-
+      <br><br>
     </div>
 
     <div class="col s12 m6">
@@ -61,7 +57,7 @@
     </div>
   </div>
 
-  <footer class="page-footer black">
+  <footer class="page-footer blue-grey darken-3">
     <div class="footer-copyright">
       <div class="container">
         Copyright 2016
