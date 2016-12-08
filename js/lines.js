@@ -63,7 +63,7 @@
   }
 
   context.lineWidth = 0.02;
-  context.fillStyle = 'rgba(200,50,200,0.01)';
+  context.fillStyle = 'rgba(200,50,200,0.03)';
   Shape.prototype.draw = function() {
     context.beginPath();
     context.moveTo(this.path[0].x, this.path[0].y);

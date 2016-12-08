@@ -28,58 +28,37 @@
     </div>
   </nav>
 
-  <div id="linesCanvasContainer">
+  <div id="splashContainer">
     <canvas id="linesCanvas"></canvas>
     <br><br><br><br>
     <h2 class="header center black-text">Art Meets Code: Now Enrolling</h1>
     <br><br><br><br>
   </div>
 
-  <div class="section">
-      <canvas id="circleCanvas"></canvas>
-  </div>
-  <div class="section">
-      <canvas id="linesCanvas"></canvas>
-  </div>
+  <div class="row lighten-4 grey">
+    <div class="col s12 m6 white">
+      <h4 class="center">Live Example - click to edit</h4>
 
-  <div class="container">
-    <div class="section">
+      <p class="light">Try changing the value of MAX_RADIUS to 50:</p>
+      <p>var MAX_RADIUS = </p>
+      <input id="radiusSetter" type="text" value="300">
+      <button onclick="exercise1()">go</button>
 
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
-      </div>
-
+      <p class="light">Feeling more ambitious? Try changing the following function:</p>
+      <textarea id="drawFunctionInput" cols="30" rows="10" style="height:300px">
+context.beginPath();
+context.arc(this.x, this.y, this.radius + 5, 0, 2 * Math.PI);
+context.fillStyle = getRandomColor();
+context.fill();
+      </textarea>
+      <button onclick="exercise2()">go</button>
+      
+      <p class="light">Broke everything? No problem! Click the Reset button:</p>
+      <button>reset</button>
     </div>
-    <br><br>
 
-    <div class="section">
-
+    <div class="col s12 m6">
+      <canvas id="circleCanvas"></canvas>
     </div>
   </div>
 

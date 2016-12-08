@@ -1,4 +1,4 @@
-(function() {
+var circles = (function() {
   "use strict";
 
   var canvas = document.getElementById("circleCanvas");
@@ -8,30 +8,15 @@
   var LOWER_BOUND = canvas.height = 500;
   var MAX_RADIUS = 300;
 
-  var count = 0;
-  canvas.addEventListener('click', function() {
-    count++;
+  canvas.addEventListener('click', cycle);
+
+  function cycle() {
+    Circle.prototype.resetDraw();
     context.clearRect(0, 0, canvas.width, canvas.height);
-
-    if (count % 5 === 0) {
-      color = 255;
-      Circle.prototype.draw = Circle.prototype.draw1;
-    } else if (count % 5 === 1) {
-      context.fillStyle = "#000000"
-      context.fillRect(0, 0, canvas.width, canvas.height);
-      Circle.prototype.draw = Circle.prototype.draw2;
-    } else if (count % 5 === 2) {
-      Circle.prototype.draw = Circle.prototype.draw3;
-    } else if (count % 5 === 3) {
-      Circle.prototype.draw = Circle.prototype.draw4;
-    } else {
-      Circle.prototype.draw = Circle.prototype.draw5;
-    }
-
     clearInterval(interval);
     circles = [];
     startSequence();
-  });
+  }
 
   function Circle(x, y, radius) {
     this.x = x;
@@ -43,74 +28,14 @@
     return Math.sqrt((x - this.x) * (x - this.x) + (y - this.y) * (y - this.y)) - this.radius;
   }
 
-  // crescents
-  Circle.prototype.draw5 = function() {
-    context.beginPath();
-    context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-    context.fillStyle = getRandomColor();
-    context.fill();
-
-    var shadow = 0.99;
-    context.beginPath();
-    context.arc(this.x - this.radius * (1 - shadow), this.y, (this.radius) * shadow, 0, 2 * Math.PI);
-    context.fillStyle = "#FFF";
-    context.fill();
-
-  }
-
-  // mushroom trees
-  Circle.prototype.draw2 = function() {
-    context.beginPath();
-    context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-    context.fillStyle = "#000000";
-    context.fill();
-
-    var amount = 3;
-    for (var shadow = .9; shadow > 0; shadow -= 0.01) {
-      context.beginPath();
-      var color = context.fillStyle;
-      var red = (parseInt(color.substring(1, 3), 16) + amount).toString(16);
-      red = red.length === 1 ? "0" + red : red;
-
-      var green = (parseInt(color.substring(3, 5), 16) + amount).toString(16);
-      green = green.length === 1 ? "0" + green : green;
-
-      var blue = (parseInt(color.substring(5, 7), 16) + amount).toString(16)
-      blue = blue.length === 1 ? "0" + blue : blue;
-
-      context.fillStyle = "#" + red + green + blue;
-
-      context.arc(this.x - 0.5 * this.radius * (1 - shadow), this.y, (this.radius) * shadow, 0, 2 * Math.PI);
-      context.fill();
-      context.closePath();
-    }
-  }
-
-  // color tunnels
-  Circle.prototype.draw3 = function() {
-    var amount = 15;
-    for (var shadow = 1; shadow > 0; shadow -= 0.05) {
-      context.beginPath();
-      context.fillStyle = getRandomColor();
-      context.arc(this.x - 0.9 * this.radius * (1 - shadow), this.y, (this.radius) * shadow, 0, 2 * Math.PI);
-      context.fill();
-      context.closePath();
-    }
-  }
-
-
-  // bubbles
-  Circle.prototype.draw4 = function() {
-    context.beginPath();
-    context.arc(this.x, this.y, this.radius + 5, 0, 2 * Math.PI);
-    context.fillStyle = getRandomColor();
-    context.fill();
-  }
-
   // petri dish
-  var color = 255;
-  var colorCount = 0;
-  Circle.prototype.draw1 = function() {
+  var color;
+  var colorCount;
+  Circle.prototype.resetDraw = function() {
+    color = 255;
+    colorCount = 0;
+  }
+  Circle.prototype.draw = function() {
     var hexColor = color.toString(16);
     if (colorCount++ % 2 === 0) {
       color--;
@@ -120,8 +45,6 @@
     context.fillStyle = "#" + hexColor + hexColor + hexColor;
     context.fill();
   }
-
-  Circle.prototype.draw = Circle.prototype.draw1;
 
   var circles = [];
   var interval;
@@ -174,4 +97,25 @@
   function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
   }
+
+  return {
+    setMaxRadius: function(radius) {
+      MAX_RADIUS = radius;
+      cycle();
+    },
+    setDrawFunction: function(text) {
+      Circle.prototype.draw = eval(text);
+      cycle();
+    }
+  }
 })();
+
+function exercise1() {
+  var radius = parseInt($("#radiusSetter").val())
+  circles.setMaxRadius(radius);
+}
+
+function exercise2() {
+  var completedString = "(function() {" + $("#drawFunctionInput").val() + "})";
+  circles.setDrawFunction(completedString);
+}
