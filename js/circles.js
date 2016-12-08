@@ -98,6 +98,8 @@ var circles = (function() {
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
+  cycle();
+
   return {
     setMaxRadius: function(radius) {
       MAX_RADIUS = radius;
