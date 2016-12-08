@@ -18,7 +18,7 @@ var circles = (function() {
   function cycle() {
     Circle.prototype.resetDraw();
     context.fillStyle = "#FFFFFF";
-    context.fillRect(0, 0, canvas.width, canvas.height);
+    context.fillRect(0, 0, RIGHT_BOUND, LOWER_BOUND);
     clearInterval(interval);
     circles = [];
     startSequence();

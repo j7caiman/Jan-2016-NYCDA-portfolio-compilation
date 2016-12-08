@@ -7,6 +7,10 @@
   var RIGHT_BOUND = canvas[0].width = canvas.width();
   var LOWER_BOUND = canvas[0].height = canvas.height();
 
+  context.fillStyle = "#FFFFFF";
+  context.fillRect(0, 0, RIGHT_BOUND, LOWER_BOUND);
+
+
   function Shape(path, fillColor) {
     this.path = path;
     this.fillColor = fillColor;
@@ -102,7 +106,7 @@
       clearInterval(interval);
     }
     // for (var i = 0; i < 10; i++) {
-      runOneIteration();
+    runOneIteration();
     // }
   }, 1);
 
