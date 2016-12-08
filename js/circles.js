@@ -113,11 +113,36 @@ var circles = (function() {
 })();
 
 function exercise1() {
-  var radius = parseInt($("#radiusSetter").val())
-  circles.setMaxRadius(radius);
+  eval(editor1.getValue());
+
+  var MAX_RADIUS = MAX_RADIUS || 300;
+
+  circles.setMaxRadius(MAX_RADIUS);
 }
 
 function exercise2() {
-  var completedString = "(function() {" + $("#drawFunctionInput").val() + "})";
+  var input = editor2.getValue();
+  var completedString = "(function() {" + input + "})";
   circles.setDrawFunction(completedString);
 }
+
+function resetPage() {
+  location.reload();
+}
+
+var editor1 = ace.edit("editor1");
+editor1.setTheme("ace/theme/solarized_light");
+editor1.session.setMode("ace/mode/javascript");
+editor1.setOptions({
+  minLines: 1,
+  maxLines: 1,
+  showLineNumbers: false
+});
+
+var editor2 = ace.edit("editor2");
+editor2.setTheme("ace/theme/solarized_light");
+editor2.session.setMode("ace/mode/javascript");
+editor2.setOptions({
+  minLines: 8,
+  maxLines: 8
+});

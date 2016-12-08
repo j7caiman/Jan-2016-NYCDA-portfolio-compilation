@@ -31,30 +31,29 @@
   <div id="splashContainer">
     <canvas id="linesCanvas"></canvas>
     <br><br><br><br>
-    <h2 class="header center black-text">Art Meets Code: Now Enrolling</h1>
+    <h2 class="header center black-text">Art Meets Code: Now Enrolling</h2>
     <br><br><br><br>
   </div>
 
   <div class="row lighten-4 grey">
     <div class="col s12 m6 white">
-      <h4 class="center">Live Example - click to edit</h4>
+      <h4 class="center">See for yourself:</h4>
 
-      <p class="light">Try changing the value of MAX_RADIUS to 50:</p>
-      <p>var MAX_RADIUS = </p>
-      <input id="radiusSetter" type="text" value="300">
-      <button onclick="exercise1()">go</button>
+      <p class="light">Try changing the value of MAX_RADIUS from 300 to 50:</p>
+      <pre id="editor1">var MAX_RADIUS = 300;</pre>
+      <a class="waves-effect waves-light btn" onclick="exercise1()">execute</a>
 
       <p class="light">Feeling more ambitious? Try changing the following function:</p>
-      <textarea id="drawFunctionInput" cols="30" rows="10" style="height:300px">
-context.beginPath();
-context.arc(this.x, this.y, this.radius + 5, 0, 2 * Math.PI);
-context.fillStyle = getRandomColor();
-context.fill();
-      </textarea>
-      <button onclick="exercise2()">go</button>
-      
+      <pre id="editor2">context.beginPath();
+        context.arc(this.x, this.y, this.radius + 5, 0, 2 * Math.PI);
+        context.fillStyle = getRandomColor();
+        context.fill();
+      </pre>
+      <a class="waves-effect waves-light btn" onclick="exercise2()">execute</a>
+
       <p class="light">Broke everything? No problem! Click the Reset button:</p>
-      <button>reset</button>
+      <a class="waves-effect waves-light btn" onclick="resetPage()">reset</a>
+
     </div>
 
     <div class="col s12 m6">
@@ -73,10 +72,14 @@ context.fill();
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
   <script src="js/materialize/materialize.min.js"></script>
   <script src="js/materialize/init.js"></script>
+
+  <script src="js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+
   <script src="js/circles.js"></script>
   <script src="js/lines.js"></script>
 
-  </body>
+</body>
 </html>
