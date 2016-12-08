@@ -44,7 +44,7 @@
       <a class="waves-effect waves-light btn" onclick="exercise1()">execute</a>
 
       <p class="light">Feeling more ambitious? Try changing the following function:</p>
-      <pre id="editor2">context.beginPath();&#13;context.arc(this.x, this.y, this.radius + 5, 0, 2 * Math.PI);&#13;context.fillStyle = getRandomColor();&#13;context.fill();</pre>
+      <pre id="editor2">context.beginPath();&#10;context.arc(this.x, this.y, this.radius + 5, 0, 2 * Math.PI);&#10;context.fillStyle = getRandomColor();&#10;context.fill();</pre>
       <a class="waves-effect waves-light btn" onclick="exercise2()">execute</a>
 
       <p class="light">Broke everything? No problem! Click the Reset button:</p>
@@ -74,10 +74,28 @@
   </div>
 
   <div class="section row blue-grey">
-    <div class="col sm12 m7 blue-grey lighten-5">
+    <form id="contactform" class="col sm12 m7 blue-grey lighten-5" action="javascript:void(0);">
       <h3>Contact</h3>
-      <p class="light">contact form here</p>
-    </div>
+      <p class="light">Feel free to send me a message! I will get back to you as quickly as possible. Thank you!</p>
+
+      <div class="input-field">
+        <input id="email" type="email" name="_replyto" class="validate">
+        <label for="email">Email</label>
+      </div>
+
+      <div class="input-field">
+        <textarea id="textarea1" name="message" class="validate" class="materialize-textarea"></textarea>
+        <label for="textarea1">Message</label>
+      </div>
+
+      <input type="text" name="_gotcha" style="display:none" />
+
+      <button id="sendMessage" class="btn waves-effect waves-light" type="submit">Send
+        <i class="material-icons right">send</i>
+      </button>
+
+      <br><br>
+    </form>
   </div>
 
   <footer class="page-footer blue-grey darken-3">
@@ -99,6 +117,7 @@
 
   <script src="js/circles.js"></script>
   <script src="js/lines.js"></script>
+  <script src="js/formspree.js"></script>
 
 </body>
 </html>

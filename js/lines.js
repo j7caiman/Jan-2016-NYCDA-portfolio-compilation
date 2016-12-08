@@ -3,13 +3,10 @@
 
   var canvas = $("#linesCanvas");
   var context = canvas[0].getContext("2d");
+  $("#splashContainer").click(restart);
 
-  var RIGHT_BOUND = canvas[0].width = canvas.width();
-  var LOWER_BOUND = canvas[0].height = canvas.height();
-
-  context.fillStyle = "#FFFFFF";
-  context.fillRect(0, 0, RIGHT_BOUND, LOWER_BOUND);
-
+  var RIGHT_BOUND;
+  var LOWER_BOUND;
 
   function Shape(path, fillColor) {
     this.path = path;
@@ -61,13 +58,11 @@
     }
 
     return [
-      new Shape(newShape1, getRandomColor()),
-      new Shape(newShape2, getRandomColor())
+    new Shape(newShape1, getRandomColor()),
+    new Shape(newShape2, getRandomColor())
     ];
   }
 
-  context.lineWidth = 0.02;
-  context.fillStyle = 'rgba(200,50,200,0.03)';
   Shape.prototype.draw = function() {
     context.beginPath();
     context.moveTo(this.path[0].x, this.path[0].y);
@@ -80,48 +75,64 @@
     context.stroke();
   }
 
-  var firstShape = new Shape(
-    [{
-      x: 0,
-      y: 0
-    }, {
-      x: 0,
-      y: LOWER_BOUND
-    }, {
-      x: RIGHT_BOUND,
-      y: LOWER_BOUND
-    }, {
-      x: RIGHT_BOUND,
-      y: 0
-    }],
-    getRandomColor()
-  );
+  restart();
 
-  var shapes = [];
-  shapes.push(firstShape);
+  var interval;
+  function restart() {
+    clearInterval(interval);
 
-  var count = 0;
-  var interval = setInterval(function() {
-    if (count++ === 1500) {
-      clearInterval(interval);
-    }
-    // for (var i = 0; i < 10; i++) {
-    runOneIteration();
-    // }
-  }, 1);
+    RIGHT_BOUND = canvas[0].width = canvas.width();
+    LOWER_BOUND = canvas[0].height = canvas.height();
 
-  function runOneIteration() {
-    var line = makeLine();
-    for (var i = 0; i < shapes.length; i++) {
-      var shape = shapes[i];
-      if (shape.containsPoint(line.randomPoint)) {
-        shapes.splice(i, 1);
-        var newShapes = shape.split(line);
-        newShapes[0].draw();
-        newShapes[1].draw();
-        shapes.push(newShapes[0]);
-        shapes.push(newShapes[1]);
-        break;
+    context.fillStyle = "#FFFFFF";
+    context.fillRect(0, 0, RIGHT_BOUND, LOWER_BOUND);
+
+    context.lineWidth = 0.02;
+    context.fillStyle = 'rgba(200,50,200,0.03)';
+
+    var firstShape = new Shape(
+      [{
+        x: 0,
+        y: 0
+      }, {
+        x: 0,
+        y: LOWER_BOUND
+      }, {
+        x: RIGHT_BOUND,
+        y: LOWER_BOUND
+      }, {
+        x: RIGHT_BOUND,
+        y: 0
+      }],
+      getRandomColor()
+      );
+
+    var shapes = [];
+    shapes.push(firstShape);
+
+    var count = 0;
+    interval = setInterval(function() {
+      if (count++ === 1500) {
+        clearInterval(interval);
+      }
+      for(var i = 0; i < 20; i++) {
+        runOneIteration();
+      }
+    }, 1);
+
+    function runOneIteration() {
+      var line = makeLine();
+      for (var i = 0; i < shapes.length; i++) {
+        var shape = shapes[i];
+        if (shape.containsPoint(line.randomPoint)) {
+          shapes.splice(i, 1);
+          var newShapes = shape.split(line);
+          newShapes[0].draw();
+          newShapes[1].draw();
+          shapes.push(newShapes[0]);
+          shapes.push(newShapes[1]);
+          break;
+        }
       }
     }
   }
