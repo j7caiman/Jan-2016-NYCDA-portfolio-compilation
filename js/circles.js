@@ -154,7 +154,6 @@ editor2.setOptions({
   maxLines: 8
 });
 
-
 setTimeout(function() {
   circles.resetBounds($("#circleCanvas").width(), $("#textEditors").height());
   circles.cycle();

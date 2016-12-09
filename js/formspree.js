@@ -1,16 +1,28 @@
 $("#sendMessage").click(function() {
-  var data = {
-    email: $("#email").val(),
-    content: $("#textarea1").val(),
-  };
+  var emailTag = $("#email");
+  var contentTag = $("#textarea1")
+
+  if (!emailTag.hasClass("valid") || !contentTag.hasClass("valid")) {
+    if (!emailTag.hasClass("valid")) {
+      emailTag.addClass("invalid");
+    }
+    if (!contentTag.hasClass("valid")) {
+      contentTag.addClass("invalid");
+    }
+
+    return;
+  }
 
   $.ajax({
     method: "POST",
     url: "https://formspree.io/j7caiman+codeSchoolFormspree@gmail.com",
-    data: data,
+    data: {
+      email: emailTag.val(),
+      content: contentTag.val(),
+    },
     dataType: "json",
     success: function() {
-      Materialize.toast("Thank you for your email! I'll respond as soon as possible.", 3000);
+      $('#emailSentModal').modal('open');
     }
   });
 });
