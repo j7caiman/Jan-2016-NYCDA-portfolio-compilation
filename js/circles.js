@@ -36,16 +36,14 @@ var circles = (function() {
 
   // petri dish
   var color;
-  var colorCount;
   Circle.prototype.resetDraw = function() {
     color = 255;
-    colorCount = 0;
   }
+
   Circle.prototype.draw = function() {
     var hexColor = color.toString(16);
-    if (colorCount++ % 2 === 0) {
-      color--;
-    }
+    color--;
+
     context.beginPath();
     context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
     context.fillStyle = "#" + hexColor + hexColor + hexColor;
@@ -57,7 +55,7 @@ var circles = (function() {
 
   function startSequence() {
     interval = setInterval(function() {
-      var giveUp = 50;
+      var giveUp = 40;
       while (giveUp-- > 0) {
         var x = getRandomInt(0, RIGHT_BOUND);
         var y = getRandomInt(0, LOWER_BOUND);
@@ -88,7 +86,7 @@ var circles = (function() {
       if (giveUp === 0) {
         clearInterval(interval);
       }
-    }, 20);
+    }, 40);
   }
 
   function makeCircle(circle) {

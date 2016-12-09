@@ -11,8 +11,8 @@
 
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen"/>
 </head>
-<body class="blue-grey">
-  <nav class="blue-grey darken-3">
+<body>
+  <nav>
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Jon Miller's School</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Course Information</a></li>
@@ -32,93 +32,106 @@
   <div id="splashContainer">
     <canvas id="linesCanvas"></canvas>
     <br><br><br><br>
-    <h2 class="header center black-text">Art Meets Code: Now Enrolling</h2>
+    <h2 class="header center">Art Meets Code: Now Enrolling</h2>
     <br><br><br><br>
   </div>
 
-  <div class="section row blue-grey">
-    <div id="textEditors" class="col s12 m6 blue-grey lighten-5">
-      <h4 class="center">See for yourself:</h4>
+  <div class="divider"></div>
 
-      <p class="light">Try changing the value of MAX_RADIUS from 200 to 50:</p>
-      <pre id="editor1">var MAX_RADIUS = 200;</pre>
-      <a class="waves-effect waves-light btn" onclick="exercise1()">execute</a>
+  <div class="section container ">
+    <div class="section row">
+      <div id="textEditors" class="col s12 m6">
+        <h4>See for yourself:</h4>
 
-      <p class="light">Feeling more ambitious? Try changing the following function:</p>
-      <pre id="editor2">function getRandomColor() {&#10;  var red = getRandomInt(0, 256);&#10;  var green = getRandomInt(0, 256);&#10;  var blue = getRandomInt(0, 256);&#10;  return 'rgb(' + red + ',' + green + ',' + blue + ')';&#10;}&#10;&#10;var color = getRandomColor();&#10;setColor(color);&#10;&#10;makeCircle(this);</pre>
-      <a class="waves-effect waves-light btn" onclick="exercise2()">execute</a>
+        <p>Try changing the value of MAX_RADIUS from 200 to 50:</p>
+        <pre id="editor1">var MAX_RADIUS = 200;</pre>
+        <a class="waves-effect waves-light btn" onclick="exercise1()">execute</a>
 
-      <p class="light">Broke everything? No problem! Click the Reset button:</p>
-      <a class="waves-effect waves-light btn" onclick="resetPage()">reset</a>
-      <br><br>
-    </div>
+        <p>Feeling more ambitious? Try changing the following function:</p>
+        <pre id="editor2">function getRandomColor() {&#10;  var red = getRandomInt(0, 256);&#10;  var green = getRandomInt(0, 256);&#10;  var blue = getRandomInt(0, 256);&#10;  return 'rgb(' + red + ',' + green + ',' + blue + ')';&#10;}&#10;&#10;var color = getRandomColor();&#10;setColor(color);&#10;&#10;makeCircle(this);</pre>
+        <a class="waves-effect waves-light btn" onclick="exercise2()">execute</a>
 
-    <div class="col s12 m6">
-      <canvas id="circleCanvas"></canvas>
-    </div>
-  </div>
-
-  <div class="section row blue-grey">
-    <div class="col sm12 m7 blue-grey lighten-5">
-      <h3>About the Class</h3>
-      <h4>Art and the Fundamentals of Programming</h4>
-      <p class="light">Learn to program in JavaScript by creating procedurally generated art. This class is designed to be challenging, allowing students the opportunity to overcome intense challenges, experience the joy of discovery and problem solving, and instill a lifelong appreciation for artistic creation. The class will meet once per week for two hours at a time and will include assignments outside of class. Come prepared to work hard. No prior programming experience necessary. All age groups welcome.</p>
-    </div>
-  </div>
-
-  <div class="section row blue-grey">
-    <div class="col sm12 m5">
-          <img class="responsive-img" src="jon-miller-staff.jpg">
-    </div>
-    <div class="col sm12 m7 blue-grey lighten-5">
-      <h3>Meet the Staff</h3>
-      <p class="light">Jon Miller is a native of Pittsburgh & earned a BS in Computer & Electrical Engineering in 2010. After working as a successful software engineer with Qualcomm in San Diego & Flurry in NYC, Jon has decided to focus completely on his passion & gifting as a teacher. Through networking connections, Jon gravitated to NC after teaching for NY Code & Design in Philadelphia, Amsterdam, & Durham. After creating and teaching several classes in web development for adults, Jon feels ready to inspire and galvanize the next generation of students. Jon is currently focused on his vision to teach coding to youths as a pathway for skill development & character growth because Jon believes that well-taught coding encourages the student to become a better person. </p>
-    </div>
-  </div>
-
-  <div class="section row blue-grey">
-    <form id="contactform" class="col sm12 m7 blue-grey lighten-5" action="javascript:void(0);">
-      <h3>Contact</h3>
-      <p class="light">If you have questions or would like more information, send me a message! I will get back to you as quickly as possible.</p>
-
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" name="_replyto" class="validate">
-          <label for="email" data-error="I don't think that's a valid email address.">Email</label>
-        </div>
+        <p>Broke everything? No problem! Click the Reset button:</p>
+        <a class="waves-effect waves-light btn" onclick="resetPage()">reset</a>
+        <br><br>
       </div>
 
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea id="textarea1" name="message" class="validate materialize-textarea"></textarea>
-          <label for="textarea1" data-error="I can't respond to an empty message!">Message</label>
-        </div>
+      <div class="col s12 m6">
+        <canvas id="circleCanvas"></canvas>
       </div>
+    </div>
 
-      <input type="text" name="_gotcha" style="display:none" />
+    <div class="divider"></div>
 
-      <button id="sendMessage" class="btn waves-effect waves-light" type="submit">Send
-        <i class="material-icons right">send</i>
-      </button>
-
-      <div id="emailSentModal" class="modal">
-        <div class="modal-content">
-          <h4>Thank you for your interest!</h4>
-          <p>I'll get back to you as soon as possible.</p>
-        </div>
-        <div class="modal-footer">
-          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Got it!</a>
-        </div>
+    <div class="section row">
+      <div class="col sm12">
+        <h3>About the Class</h3>
+        <h4>Art and the Fundamentals of Programming</h4>
+        <p>Learn to program in JavaScript by creating procedurally generated art. This class is designed to be challenging, allowing students the opportunity to overcome intense challenges, experience the joy of discovery and problem solving, and instill a lifelong appreciation for artistic creation. The class will meet once per week for two hours at a time and will include assignments outside of class. Come prepared to work hard. No prior programming experience necessary. All age groups welcome.</p>
       </div>
+    </div>
 
-      <br><br>
-    </form>
+    <div class="divider"></div>
+
+    <div class="section row">
+      <div class="col sm12 m5">
+        <img id="staff1" class="responsive-img" src="images/jon-miller-staff.jpg">
+      </div>
+      <div class="col sm12 m7">
+        <h3>Meet the Staff</h3>
+        <p>Jon Miller is a native of Pittsburgh & earned a BS in Computer & Electrical Engineering in 2010. After working as a successful software engineer with Qualcomm in San Diego & Flurry in NYC, Jon has decided to focus completely on his passion & gifting as a teacher. Through networking connections, Jon gravitated to NC after teaching for NY Code & Design in Philadelphia, Amsterdam, & Durham. After creating and teaching several classes in web development for adults, Jon feels ready to inspire and galvanize the next generation of students. Jon is currently focused on his vision to teach coding to youths as a pathway for skill development & character growth because Jon believes that well-taught coding encourages the student to become a better person. </p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section row">
+      <form id="contactform" class="col sm12 m7" action="javascript:void(0);">
+        <h3>Contact</h3>
+        <p>If you have questions or would like more information, send me a message! I will get back to you as quickly as possible.</p>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" name="_replyto" class="validate">
+            <label for="email" data-error="I don't think that's a valid email address.">Email</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea1" name="message" class="validate materialize-textarea"></textarea>
+            <label for="textarea1" data-error="I can't respond to an empty message!">Message</label>
+          </div>
+        </div>
+
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <button id="sendMessage" class="btn waves-effect waves-light" type="submit">Send
+          <i class="material-icons right">send</i>
+        </button>
+
+        <div id="emailSentModal" class="modal">
+          <div class="modal-content">
+            <h4>Thank you for your interest!</h4>
+            <p>I'll get back to you as soon as possible.</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Got it!</a>
+          </div>
+        </div>
+
+        <br><br>
+      </form>
+      <div class="col sm12 m5">
+        <img id="art1" class="responsive-img" src="images/art1.png">
+      </div>
+    </div>
   </div>
 
-  <footer class="page-footer blue-grey darken-3">
+  <footer class="page-footer">
     <div class="footer-copyright">
       <div class="container">
-        Copyright 2016
+        <span>Copyright © 2016 Jon Miller. All rights reserved.</span>
       </div>
     </div>
   </footer>

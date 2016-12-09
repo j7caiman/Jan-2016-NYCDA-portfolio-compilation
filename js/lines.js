@@ -113,13 +113,13 @@
 
     var count = 0;
     interval = setInterval(function() {
-      if (count++ === 1500) {
+      if (count++ === 300) {
         clearInterval(interval);
       }
-      for(var i = 0; i < 20; i++) {
+      for(var i = 0; i < 40; i++) {
         runOneIteration();
       }
-    }, 1);
+    }, 40);
 
     function runOneIteration() {
       var line = makeLine();
