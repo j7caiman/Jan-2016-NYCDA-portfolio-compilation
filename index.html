@@ -40,12 +40,12 @@
     <div id="textEditors" class="col s12 m6 blue-grey lighten-5">
       <h4 class="center">See for yourself:</h4>
 
-      <p class="light">Try changing the value of MAX_RADIUS from 300 to 50:</p>
-      <pre id="editor1">var MAX_RADIUS = 300;</pre>
+      <p class="light">Try changing the value of MAX_RADIUS from 200 to 50:</p>
+      <pre id="editor1">var MAX_RADIUS = 200;</pre>
       <a class="waves-effect waves-light btn" onclick="exercise1()">execute</a>
 
       <p class="light">Feeling more ambitious? Try changing the following function:</p>
-      <pre id="editor2">context.beginPath();&#10;context.arc(this.x, this.y, this.radius + 5, 0, 2 * Math.PI);&#10;context.fillStyle = getRandomColor();&#10;context.fill();</pre>
+      <pre id="editor2">function getRandomColor() {&#10;  var red = getRandomInt(0, 256);&#10;  var green = getRandomInt(0, 256);&#10;  var blue = getRandomInt(0, 256);&#10;  return 'rgb(' + red + ',' + green + ',' + blue + ')';&#10;}&#10;&#10;var color = getRandomColor();&#10;setColor(color);&#10;&#10;makeCircle(this);</pre>
       <a class="waves-effect waves-light btn" onclick="exercise2()">execute</a>
 
       <p class="light">Broke everything? No problem! Click the Reset button:</p>
@@ -67,10 +67,12 @@
   </div>
 
   <div class="section row blue-grey">
-    <div class="col sm12 m5"></div>
+    <div class="col sm12 m5">
+          <img class="responsive-img" src="jon-miller-staff.jpg">
+    </div>
     <div class="col sm12 m7 blue-grey lighten-5">
       <h3>Meet the Staff</h3>
-      <p class="light">Bio: Jon Miller is a native of Pittsburgh & earned a BS in Computer & Electrical Engineering in 2010. After working as a successful software engineer with Qualcomm in San Diego & Flurry in NYC, Jon has decided to focus completely on his passion & gifting as a teacher. Through networking connections, Jon gravitated to NC after teaching for NY Code & Design in Philadelphia, Amsterdam, & Durham. After creating and teaching several classes in web development for adults, Jon feels ready to inspire and galvanize the next generation of students. Jon is currently focused on his vision to teach coding to youths as a pathway for skill development & character growth because Jon believes that well-taught coding encourages the student to become a better person. </p>
+      <p class="light">Jon Miller is a native of Pittsburgh & earned a BS in Computer & Electrical Engineering in 2010. After working as a successful software engineer with Qualcomm in San Diego & Flurry in NYC, Jon has decided to focus completely on his passion & gifting as a teacher. Through networking connections, Jon gravitated to NC after teaching for NY Code & Design in Philadelphia, Amsterdam, & Durham. After creating and teaching several classes in web development for adults, Jon feels ready to inspire and galvanize the next generation of students. Jon is currently focused on his vision to teach coding to youths as a pathway for skill development & character growth because Jon believes that well-taught coding encourages the student to become a better person. </p>
     </div>
   </div>
 

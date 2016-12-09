@@ -87,7 +87,8 @@
     context.fillStyle = "#FFFFFF";
     context.fillRect(0, 0, RIGHT_BOUND, LOWER_BOUND);
 
-    context.lineWidth = 0.02;
+    context.lineWidth = 0.005;
+    context.strokeStyle = 'rgba(255,150,00,0.3)';
     context.fillStyle = 'rgba(200,50,200,0.03)';
 
     var firstShape = new Shape(
