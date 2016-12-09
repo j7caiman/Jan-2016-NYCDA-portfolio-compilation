@@ -8,17 +8,22 @@ var circles = (function() {
   var LOWER_BOUND;
   var MAX_RADIUS = 200;
 
-  canvas.addEventListener('click', cycle);
+  canvas.addEventListener('click', restart);
 
-  function resetBounds(width, height) {
-    RIGHT_BOUND = canvas.width = width;
-    LOWER_BOUND = canvas.height = height;
+  function restart() {
+    resetCanvas();
+    cycle();
+  }
+
+  function resetCanvas() {
+    RIGHT_BOUND = canvas.width = $("#circleCanvas").width();
+    LOWER_BOUND = canvas.height = $("#textEditors").height();
+    context.fillStyle = "#FFFFFF";
+    context.fillRect(0, 0, RIGHT_BOUND, LOWER_BOUND);
   }
 
   function cycle() {
     Circle.prototype.resetDraw();
-    context.fillStyle = "#FFFFFF";
-    context.fillRect(0, 0, RIGHT_BOUND, LOWER_BOUND);
     clearInterval(interval);
     circles = [];
     startSequence();
@@ -104,15 +109,15 @@ var circles = (function() {
   }
 
   return {
-    resetBounds: resetBounds,
-    cycle: cycle,
+    resetCanvas: resetCanvas,
+    restart: restart,
     setMaxRadius: function(radius) {
       MAX_RADIUS = radius;
-      cycle();
+      restart();
     },
     setDrawFunction: function(text) {
       Circle.prototype.draw = eval(text);
-      cycle();
+      restart();
     }
   }
 })();
@@ -151,12 +156,18 @@ editor2.setOptions({
 });
 
 $(window).resize(function() {
-  circles.resetBounds($("#circleCanvas").width(), $("#textEditors").height());
-  circles.cycle();
+  circles.restart();
 });
 
 // avoid unknown race condition which doesn't return the expected height of the #textEditors div
 setTimeout(function() {
-  circles.resetBounds($("#circleCanvas").width(), $("#textEditors").height());
-  circles.cycle();
+  circles.resetCanvas();
 }, 1);
+
+var once = true;
+$(window).scroll(function() {
+  if (once) {
+    once = false;
+    circles.restart();
+  }
+});

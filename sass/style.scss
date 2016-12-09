@@ -7,6 +7,10 @@
 	font-size: inherit;
 }
 
+html {
+  font-family: Calibri, Trebuchet, sans-serif;
+}
+
 body {
   @extend .blue-grey, .lighten-5;
 }
@@ -44,4 +48,8 @@ p, span {
 
 .divider {
   @extend .blue-grey;
+}
+
+#splashText {
+  text-shadow: rgba(0, 0, 0, 0.6) 1px 2px 3px, rgba(255, 255, 255, 0.6) -1px -2px 3px
 }

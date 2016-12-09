@@ -58,8 +58,8 @@
     }
 
     return [
-    new Shape(newShape1, getRandomColor()),
-    new Shape(newShape2, getRandomColor())
+      new Shape(newShape1, chooseFillColor()),
+      new Shape(newShape2, chooseFillColor())
     ];
   }
 
@@ -70,14 +70,14 @@
       var point = this.path[i];
       context.lineTo(point.x, point.y);
     }
-    // context.fillStyle = this.fillColor;
+    context.fillStyle = this.fillColor;
     context.fill();
-    context.stroke();
   }
 
   restart();
 
   var interval;
+
   function restart() {
     clearInterval(interval);
 
@@ -88,9 +88,6 @@
     context.fillRect(0, 0, RIGHT_BOUND, LOWER_BOUND);
 
     context.lineWidth = 0.005;
-    context.strokeStyle = 'rgba(255,150,00,0.3)';
-    context.fillStyle = 'rgba(200,50,200,0.03)';
-
     var firstShape = new Shape(
       [{
         x: 0,
@@ -105,8 +102,8 @@
         x: RIGHT_BOUND,
         y: 0
       }],
-      getRandomColor()
-      );
+      chooseFillColor()
+    );
 
     var shapes = [];
     shapes.push(firstShape);
@@ -116,7 +113,7 @@
       if (count++ === 300) {
         clearInterval(interval);
       }
-      for(var i = 0; i < 40; i++) {
+      for (var i = 0; i < 40; i++) {
         runOneIteration();
       }
     }, 40);
@@ -209,20 +206,24 @@
     };
   }
 
-  function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-      color += letters[getRandomInt(0, 16)];
-    }
-    return color;
-  }
-
   function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
-  function getRandomArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
+  function chooseFillColor() {
+    var chooseColor = getRandomInt(0, 3);
+    var color;
+    switch (chooseColor) {
+      case 0:
+        color = 'rgba(251,142,144,0.12)'; // pink
+        break;
+      case 1:
+        color = 'rgba(255,255,255,0.6)'; // white
+        break;
+      default:
+        color = 'rgba(2,39,149,0.09)'; // dark blue
+        break;
+    }
+    return color;
   }
 }());
