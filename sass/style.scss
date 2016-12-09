@@ -16,7 +16,7 @@ body {
 }
 
 nav, footer {
- @extend .blue-grey, .darken-3; 
+ @extend .blue-grey, .darken-3;
 }
 
 p, span {
@@ -51,5 +51,6 @@ p, span {
 }
 
 #splashText {
+  @extend .blue-grey-text, .text-darken-3;
   text-shadow: rgba(0, 0, 0, 0.6) 1px 2px 3px, rgba(255, 255, 255, 0.6) -1px -2px 3px
 }
