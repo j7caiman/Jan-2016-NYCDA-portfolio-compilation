@@ -1462,61 +1462,61 @@
 .brown-text.text-darken-4 {
   color: #3e2723 !important; }
 
-.blue-grey, body, nav, footer, #circleCanvas, #art1, .divider {
+.blue-grey, body, nav, footer, .divider {
   background-color: #607d8b !important; }
 
 .blue-grey-text, #splashText {
   color: #607d8b !important; }
 
-.blue-grey.lighten-5, body, nav.lighten-5, footer.lighten-5, .lighten-5#circleCanvas, body#circleCanvas, .lighten-5#art1, body#art1, .lighten-5.divider, body.divider {
+.blue-grey.lighten-5, body, nav.lighten-5, footer.lighten-5, .lighten-5.divider, body.divider {
   background-color: #eceff1 !important; }
 
 .blue-grey-text.text-lighten-5, .text-lighten-5#splashText {
   color: #eceff1 !important; }
 
-.blue-grey.lighten-4, body.lighten-4, nav.lighten-4, footer.lighten-4, .lighten-4#circleCanvas, .lighten-4#art1, .lighten-4.divider {
+.blue-grey.lighten-4, body.lighten-4, nav.lighten-4, footer.lighten-4, .lighten-4.divider {
   background-color: #cfd8dc !important; }
 
 .blue-grey-text.text-lighten-4, .text-lighten-4#splashText {
   color: #cfd8dc !important; }
 
-.blue-grey.lighten-3, body.lighten-3, nav.lighten-3, footer.lighten-3, .lighten-3#circleCanvas, .lighten-3#art1, .lighten-3.divider {
+.blue-grey.lighten-3, body.lighten-3, nav.lighten-3, footer.lighten-3, .lighten-3.divider {
   background-color: #b0bec5 !important; }
 
 .blue-grey-text.text-lighten-3, .text-lighten-3#splashText {
   color: #b0bec5 !important; }
 
-.blue-grey.lighten-2, body.lighten-2, nav.lighten-2, footer.lighten-2, .lighten-2#circleCanvas, .lighten-2#art1, .lighten-2.divider {
+.blue-grey.lighten-2, body.lighten-2, nav.lighten-2, footer.lighten-2, .lighten-2.divider {
   background-color: #90a4ae !important; }
 
 .blue-grey-text.text-lighten-2, .text-lighten-2#splashText {
   color: #90a4ae !important; }
 
-.blue-grey.lighten-1, body.lighten-1, nav.lighten-1, footer.lighten-1, .lighten-1#circleCanvas, .lighten-1#art1, .lighten-1.divider {
+.blue-grey.lighten-1, body.lighten-1, nav.lighten-1, footer.lighten-1, .lighten-1.divider {
   background-color: #78909c !important; }
 
 .blue-grey-text.text-lighten-1, .text-lighten-1#splashText {
   color: #78909c !important; }
 
-.blue-grey.darken-1, body.darken-1, nav.darken-1, footer.darken-1, .darken-1#circleCanvas, .darken-1#art1, .darken-1.divider {
+.blue-grey.darken-1, body.darken-1, nav.darken-1, footer.darken-1, .darken-1.divider {
   background-color: #546e7a !important; }
 
 .blue-grey-text.text-darken-1, .text-darken-1#splashText {
   color: #546e7a !important; }
 
-.blue-grey.darken-2, body.darken-2, nav.darken-2, footer.darken-2, .darken-2#circleCanvas, .darken-2#art1, .darken-2.divider {
+.blue-grey.darken-2, body.darken-2, nav.darken-2, footer.darken-2, .darken-2.divider {
   background-color: #455a64 !important; }
 
 .blue-grey-text.text-darken-2, .text-darken-2#splashText {
   color: #455a64 !important; }
 
-.blue-grey.darken-3, body.darken-3, nav, footer, .darken-3#circleCanvas, nav#circleCanvas, footer#circleCanvas, .darken-3#art1, nav#art1, footer#art1, .darken-3.divider, nav.divider, footer.divider {
+.blue-grey.darken-3, body.darken-3, nav, footer, .darken-3.divider, nav.divider, footer.divider {
   background-color: #37474f !important; }
 
 .blue-grey-text.text-darken-3, #splashText {
   color: #37474f !important; }
 
-.blue-grey.darken-4, body.darken-4, nav.darken-4, footer.darken-4, .darken-4#circleCanvas, .darken-4#art1, .darken-4.divider {
+.blue-grey.darken-4, body.darken-4, nav.darken-4, footer.darken-4, .darken-4.divider {
   background-color: #263238 !important; }
 
 .blue-grey-text.text-darken-4, .text-darken-4#splashText {
@@ -6379,7 +6379,7 @@ html {
   position: relative; }
 
 #circleCanvas, #art1 {
-  padding: 0.07em; }
+  border: 1px solid #607d8b; }
 
 #splashText {
   text-shadow: rgba(0, 0, 0, 0.6) 1px 2px 3px, rgba(255, 255, 255, 0.6) -1px -2px 3px; }

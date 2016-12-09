@@ -41,9 +41,9 @@ p, span {
   position: relative;
 }
 
+// @extend .blue-grey doesn't display canvas right border in chrome
 #circleCanvas, #art1 {
-  padding: 0.07em;
-  @extend .blue-grey;
+  border: 1px solid map-get($blue-grey, "base");
 }
 
 .divider {
