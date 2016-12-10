@@ -15,8 +15,12 @@ body {
   @extend .blue-grey, .lighten-5;
 }
 
-nav, footer {
- @extend .blue-grey, .darken-3;
+nav, footer, .side-nav {
+  @extend .blue-grey, .darken-3;
+}
+
+.side-nav a {
+  color: #fff;
 }
 
 p, span {
