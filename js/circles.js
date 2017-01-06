@@ -171,3 +171,10 @@ $(window).scroll(function() {
     circles.restart();
   }
 });
+
+// workaround for iOS browser bug where page scrolls to the top on form input focus
+$("#editor1, #editor2").click(function() {
+  $('html, body').animate({
+    scrollTop: $(this).offset().top
+  }, 200);
+})
